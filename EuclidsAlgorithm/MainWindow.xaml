@@ -1,0 +1,34 @@
+﻿<Window x:Class="EuclidsAlgorithm.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:EuclidsAlgorithm"
+        Title="Вычисление НОД" Height="230.8" Width="500"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <StackPanel>
+            <Border Padding="10">
+                <StackPanel x:Name="radioButtonsStackPanel" Orientation="Horizontal">
+                    <RadioButton x:Name = "EuclidRadioButton" GroupName="Algorithms" Content="Алгоритм Евклида" IsChecked="True" Margin="0 0 10 0"/>
+                    <RadioButton x:Name = "SteinRadioButton" GroupName="Algorithms" Content="Алгоритм Стейна" Margin="0 0 10 0"/>
+                </StackPanel>
+            </Border>
+            <Border Padding="10">
+                <StackPanel x:Name="parameterCountStackPanel" Orientation="Horizontal" >
+                    <Label VerticalContentAlignment="Center" Content="Введите параметры через запятую (максимально 5): " />
+                    <TextBox x:Name = "ValueTextBox" MinWidth ="150" Height="30" MaxLength="15" VerticalContentAlignment="Center"/>
+                </StackPanel>
+            </Border>
+            <Border Padding="10">
+                <StackPanel x:Name="resultStackPanel" Orientation="Horizontal" >
+                    <Button Margin="5 0 0 0" Content="Вычислить" Height="30" Width="100" Click="Button_Click_1" />
+                    <Label Margin="6 0 0 0" VerticalContentAlignment="Center" Content="Наибольший общий делитель = " />
+                    <TextBox x:Name = "ResultTextBox" MinWidth ="150" Height="30" MaxLength="15" VerticalContentAlignment="Center" IsReadOnly="True"/>
+                </StackPanel>
+            </Border>
+            <Border Padding="10">
+                <Button Padding = "10" Content="Сравнить скорость выполнения реализаций методов" Click="Button_Click"/>
+            </Border>
+        </StackPanel>
+    </Grid>
+</Window>
